@@ -1,4 +1,4 @@
-# CHHJ Inteviews Questions
+# CHHJ Inteview Questions
 
 1) Fork this repo into.
 2) Answer question set.
