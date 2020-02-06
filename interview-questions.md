@@ -24,24 +24,43 @@ variable "num" now equals "num" + 1
 
 ```
 [Put Your Answer Here]
+
+
+
 ```
 
 2. What is the correct way to create a function in PHP?
 
 ```
-[Put Your Answer Here]
+<?php
+
+function bookAuthor ()
+{
+    echo "Paulo Coelho"
+}
 ```
 
 3. Name a method to output an array?
 
 ```
-[Put Your Answer Here]
+Using return
+
+function getName ()
+{
+    return "Manuel Solis";
+}
+
+$myName = getName
+
 ```
 
 4. Which operator is used to check if two values are equal and of same data type?
 
 ```
-[Put Your Answer Here]
+The "Not Identical" operator (!==)
+
+varDump (3 !== "3")
+
 ```
 
 5. Which superglobal variable holds information about headers, paths, and script locations?
@@ -60,7 +79,7 @@ variable "num" now equals "num" + 1
 7. What is the commonly used library for database connections?
 
 ```
-[Put Your Answer Here]
+PDO (PHP Data Objects). MySQLi is another one.
 ```
 
 8. What is the commonly used library for making requests?
@@ -72,7 +91,7 @@ variable "num" now equals "num" + 1
 9. What is PHP function strlen?
 
 ```
-[Put Your Answer Here]
+It's a function that returns the length of a string. It takes one parameter of type string and returns a value of integer with the length of the string.
 ```
 
 
@@ -91,7 +110,7 @@ For the below questions, assume you are using this table (named `Persons`):
 1. How would you select just the first record and only the column `FirstName`?
 
 ```
-[Put Your Answer Here]
+SELECT FirstName FROM Persons WHERE id = '1';
 ```
 
 2. How would you select all the records where the `FirstName` is "Peter" and the `LastName` is "Jackson"?
@@ -115,19 +134,19 @@ For the below questions, assume you are using this table (named `Persons`):
 5. How would you insert the name "David Tennant"?
 
 ```
-[Put Your Answer Here]
+INSERT INTO Persons (FirstName, LastName) VALUES ('David', 'Tennant'); 
 ```
 
 6. How would you change all the records where the `FirstName` is equal to "Peter" into "Samuel"?
 
 ```
-[Put Your Answer Here]
+UPDATE Persons SET FirstName = 'Samuel' WHERE FirstName = 'Peter';
 ```
 
 7. How would you delete the records where the `LastName` is "Sebastian"?
 
 ```
-[Put Your Answer Here]
+DELETE FROM Persons WHERE LastName = 'Sebastian';
 ```
 
 8. How would you get the number of records in the `Persons` table?
