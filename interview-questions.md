@@ -72,7 +72,7 @@ varDump (3 !== "3")
 6. Explain how `static function` works in PHP class methods.
 
 ```
-[Put Your Answer Here]
+In PHP, any method declared as static will be accessible without having to create an object or having to instantiate it. Static functions are associated with a class and not the object. ANy shared logic across multiple instances should be put inside a static method.
 ```
 
 
@@ -116,13 +116,13 @@ SELECT FirstName FROM Persons WHERE id = '1';
 2. How would you select all the records where the `FirstName` is "Peter" and the `LastName` is "Jackson"?
 
 ```
-[Put Your Answer Here]
+SELECT * FROM Persons WHERE FirstName = 'Peter', LastName = 'Jackson';
 ```
 
 3. How would you select all the records where the `LastName` starts with an "s"?
 
 ```
-[Put Your Answer Here]
+SELECT * FROM Persons WHERE LastName = 'S*';
 ```
 
 4. How would you select all the records where the `FirstName` is alphabetically between "Brent" and "Linus"?
@@ -158,7 +158,11 @@ DELETE FROM Persons WHERE LastName = 'Sebastian';
 9. Give an example of how would you join 2 related tables together?
 
 ```
-[Put Your Answer Here]
+SELECT FirstName FROM Persons INNER JOIN Employees ON Persons.FirstName = Employees.FirstName;
+
+In this particular case, because it is ann INNER JOIN, it would merge the records that are present in both the Persons table AND the Employee table.
+
+Another option would be to use OUTER JOIN - LEFT or RIGHT.
 ```
 
 
@@ -167,65 +171,83 @@ DELETE FROM Persons WHERE LastName = 'Sebastian';
 1. How do you create a function in JavaScript?
 
 ```
-[Put Your Answer Here]
+function myFunction (p1, p2){
+    return p1 + p2;
+}
 ```
 
 2. How do you call a function named "myFunction"?
 
 ```
-[Put Your Answer Here]
+var myFunction = function (a, b){
+    return a * b;
+}
+console.log (myFunction);
+
 ```
 
 4. How to write an IF statement for executing some code if "i" is NOT equal to 5?
 
 ```
-[Put Your Answer Here]
+if (5 !== 5) {
+    console.log('Yes');
+}
 ```
 
 5. How does a WHILE loop start?
 
 ```
-[Put Your Answer Here]
+We need to set an initial value or 'starting point'. For example:
+
+let count = 1;
+while count < 5)[
+    console.log (count);
+count++ //this will add 1 to count until it reaches 4    
+]
 ```
 
 6. How does a FOR loop start?
 
 ```
-[Put Your Answer Here]
+for (let 1=0; 1 < 3; i++){
+    console.log (i);
+}
 ```
 
 7. How do you round the number 7.25, to the nearest integer?
 
 ```
-[Put Your Answer Here]
+Using Math.round method
+Math.round (7.25)
+This will be rounded down to 7
 ```
 
-8. What will the following code return: Boolean(10 > 9)
+8. What will the following code return: Boolean(10 > 9) true
 
 ## Section: jQuery
 
 1. Can jQuery animate() method can be used to animate ANY CSS property?
 
 ```
-[Put Your Answer Here]
+No, not ANY. It needs to be a numeric CSS property. 
 ```
 
 2. Which jQuery method is used to hide selected elements?
 
 ```
-[Put Your Answer Here]
+hide() method
 ```
 
 3. Which jQuery method is used to perform an asynchronous HTTP request?
 
 ```
-[Put Your Answer Here]
+ajax() method
 ```
 
 4. Look at the following selector: $("div p"). What does it select?
 
 ```
-[Put Your Answer Here]
+It will select all <p> elements that are a direct child of the <div> element
 ```
 
 
@@ -234,25 +256,30 @@ DELETE FROM Persons WHERE LastName = 'Sebastian';
 1. What is JSX?
 
 ```
-[Put Your Answer Here]
+It is a syntax similar to HTML or XML that React uses and extends ECMAScript so that HTLM code and be incorporated into Javascript/ React code.
+It is a syntax extension to Javascript.
+ 
+It makes it easier to add HTML into Javascript. Until JSX came along, this was not possible. It made life simpler for developers.
+It prevents injection attacks. By default, React DOM converts everything to a string before rendering on the page. This prevents things from being injected that are not explicitly written in the application.
 ```
 
 2. What triggers a render cycle?
 
 ```
-[Put Your Answer Here]
+The componentDidMount Method
 ```
 
 3. What is a React Hook?
 
 ```
-[Put Your Answer Here]
+It is a new feature in React 16.8. It allows the developer to use state and other React features without writing a class.
+It allows the developer split one component into smaller functions based on the pieces of code that are specifically related to that function rather than forcing a split based on lifecycle methods.
 ```
 
 4. Which method in a React Component should you override to stop the component from updating?
 
 ```
-[Put Your Answer Here]
+componentDidUpdate()
 ```
 
 5. Which method in a React Component is called after the component is rendered for the first time?
@@ -264,6 +291,6 @@ DELETE FROM Persons WHERE LastName = 'Sebastian';
 6. What happens when you call setState() inside render() method?
 
 ```
-[Put Your Answer Here]
+It can lead to an infinite loop, therefore it should be avoided. The render function should not be used to modify state. 
 ```
 
